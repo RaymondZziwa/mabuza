@@ -5,7 +5,7 @@ if(isset($_POST['submit']))
   $user_Mail = $_POST['email'];
   $mail = $_POST['text'];
 
-  $mailTo = "mabuzawomenclinic@hotmail.com";
+  $mailTo = "Mabuzawomenclinic@hotmail.com";
   $headers = "From: Mabuza Hospital Website";
   $txt = "You have recieved an email from ".$name.".\n\n".$mail;
 
