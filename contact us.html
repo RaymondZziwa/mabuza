@@ -86,20 +86,22 @@ span.fade{
         </div>
         <div class="row" style="margin-top: 10px;">
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6" id="form">
-                <div class="input-group" style="margin-top: 5px;">
-                    <span class="input-group-text">First and last name</span>
-                    <input type="text" aria-label="First name" class="form-control">
-                    <input type="text" aria-label="Last name" class="form-control">
-                </div>
-                <div class="input-group mb-3" style="margin-top: 20px;">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
-                    <input type="text" class="form-control" aria-label="email">
-                </div>
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Message</label>
-                </div>
-                <button type="button" class="btn btn-outline-danger" style="margin-top: 5px;">Submit</button>
+                    <form method="POST" name="myemailform" action="form-to-email.php">
+                        <div class="input-group" style="margin-top: 5px;">
+                            <span class="input-group-text">First and last name</span>
+                            <input type="text" aria-label="First name" name="fname" class="form-control">
+                            <input type="text" aria-label="Last name" name="lname" class="form-control">
+                        </div>
+                        <div class="input-group mb-3" style="margin-top: 20px;">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                            <input type="text" class="form-control" name="email" aria-label="email">
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="text" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Message</label>
+                        </div>
+                        <input type="button" class="btn btn-outline-danger"  name="submit" value ="submit" style="margin-top: 5px;">
+                    </form>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6" id="map">
 
@@ -157,7 +159,7 @@ span.fade{
     <script>
         function initMap() {
           // The location of mabuza
-          var mabuza= { lat:-28.270800, lng:  29.122300 };
+          var mabuza= { lat:-25.457100, lng:  31.008636 };
           // The map, centered at Umssn
            var map = new google.maps.Map(document.getElementById("map"), {
             zoom: 15,
